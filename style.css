@@ -1,0 +1,95 @@
+body {
+    background-color: black
+    
+}
+
+
+canvas {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    visibility: hidden;
+
+ }
+
+
+
+    form {
+
+        height: 275px;
+        width: 420px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-color:white;
+        margin: -200px 0 0 -200px;
+        border: black;
+        border-radius: 20px;
+        outline: none;
+        display: block;
+      
+  }
+
+  input {
+      margin:10px;
+      float: left;
+      outline: none;
+      cursor: pointer;
+    
+  }
+
+  label {
+   
+    float: left;
+    clear: left;
+    width: 100px;
+    margin: 10px;
+    font-size: 20px;
+    font-style: oblique;
+ 
+  }
+
+.colorInput {
+    float: left;
+    margin: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+}
+
+.submitButton {
+    background-color: black;
+    color: white;
+   border-radius: 10px;
+   float: right;
+   padding: 10px;
+   margin-right: 100px;
+   outline: none;
+  cursor: pointer;
+   
+
+   
+
+}
+
+.inputForm {
+    display: block;
+    
+}
+
+input[type=number]{
+    width: 60px;
+ 
+} 
+
+
+
+
+ 
+
