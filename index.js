@@ -6,7 +6,6 @@ let canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');
 let particles = [];
 let particleSize = 5;
-
 var maxParticles = 100;
 var threshold = 300;
 
@@ -18,12 +17,7 @@ function line(particle, particle2) {
     ctx.moveTo(particle.x, particle.y);
     ctx.lineTo(particle2.x, particle2.y);
     ctx.stroke();
-    
-   
-    
-    
-
-}
+    }
 
 // animate the partciles we just created
 
@@ -44,8 +38,21 @@ function animate() {
         }
         //iterate over a set number of particles and isolate each one using a for loop
 
-       var maxParticles = document.getElementById('particleInput').value
-       var threshold = document.getElementById('thresholdInput').value
+        var maxParticles 
+
+         if (maxParticles < 1 || maxParticles > 100) {
+           maxParticles = 0;
+
+         } else { 
+           maxParticles = document.getElementById('particleInput').value
+         }
+       var threshold
+
+       if (threshold < 1 || threshold > 300) {
+          threshold = 0;
+         } else {
+          threshold = document.getElementById('thresholdInput').value
+         }
 
     
        for (let i = 0; i < maxParticles; i++) {
@@ -110,12 +117,23 @@ for (let i = 0; i < maxParticles; i++) {
 
 function hideForm() {
 
-    document.getElementById("inputForm").style.display = "none"
-    document.getElementById("myCanvas").style.visibility = "visible"
+    document.getElementById("inputForm").style.display = "none";
+    document.getElementById("myCanvas").style.visibility = "visible";
+    document.getElementById("resetButton").style.visibility = "visible";
     return false;
 
     
 }
+
+function reset() {
+    document.getElementById("resetButton").style.visibility = "hidden";
+    document.getElementById("inputForm").style.display = "block";
+    document.getElementById("myCanvas").style.visibility = "hidden";
+    document.getElementById("inputForm").reset();
+
+}
+
+
 
 animate();
 
