@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONSTELLATIONS</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
 
-   
+<body>
 
-    <button type = "reset" id="resetButton" onclick = "reset()" value = "reset"> RESET</button>
+
+
+    <button type="reset" id="resetButton" onclick="reset()" value="reset"> RESET</button>
 
 
     <div class="inputForm">
-        
-    <form id ="inputForm" onsubmit="return hideForm()">
-        <h1 class="title">Animated Particle Generator</h1>
-        <label for="particleInput" class="particleLabel">Number of Particles:</label>
-        <input type="number" placeholder="1-100" id = "particleInput" min = "1" max = "100">
-        <label for="thersholdInput" class="thresholdLabel" >Threshold:</label>
-        <input type="number" placeholder="1-300" id = "thresholdInput" min = "1" max = "300">
-        <label for="colorInput" class="colorLabel">Color:</label>
-        <select id = "selectColor" name ="colors" class = "colorInput">
-            <option id="Blinking" value="blinking" name ="color">Blinking</option>
-            <option id="Red" value="#ff3333" name ="color" type = "color">Red</option>
-            <option id="Blue" value="#0000ff" name ="color" type="color">Blue</option>
-            <option id="Yellow" value="#ffff80" name ="color" type="color">Yellow</option>
-          </select>
-     
-          <button type = "submit" id = "submitButton" form = "inputForm" class="submitButton">SUBMIT</button>
-          
-          
 
-    </form>
+        <form id="inputForm" onsubmit="return hideForm()">
+            <h1 class="title">Animated Particle Generator</h1>
+            <label for="particleInput" class="particleLabel">Number of Particles:</label>
+            <input type="number" placeholder="1-100" id="particleInput" min="1" max="100">
+            <label for="thersholdInput" class="thresholdLabel">Threshold:</label>
+            <input type="number" placeholder="1-300" id="thresholdInput" min="1" max="300">
+            <label for="size" class="sizeLabel"> Particle Size:</label>
+            <input id="sizeInput" type="number" placeholder="1-10" min="1" max="10"></input>
+            <label for="colorInput" class="colorLabel">Color:</label>
+
+
+            <select id="selectColor" name="colors" class="colorInput">
+                <option id="Blinking" value="blinking" name="color">Blinking</option>
+                <option id="Red" value="#ff3333" name="color" type="color">Red</option>
+                <option id="Blue" value="#0000ff" name="color" type="color">Blue</option>
+                <option id="Yellow" value="#ffff80" name="color" type="color">Yellow</option>
+            </select>
+
+            <button type="submit" id="submitButton" form="inputForm" class="submitButton">SUBMIT</button>
+
+
+
+        </form>
 
     </div>
 
 
-<canvas id = "myCanvas" width = 1000 height = 1000></canvas>
+    <canvas id="myCanvas" width=1000 height=1000></canvas>
 
 
 
-<script type="text/javascript" src="index.js"></script>
-    
-    
+    <script type="text/javascript" src="index.js"></script>
+
+
 </body>
+
 </html>

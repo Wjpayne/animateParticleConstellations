@@ -5,7 +5,7 @@
 let canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');
 let particles = [];
-let particleSize = 5;
+let particleSize = 30;
 var maxParticles = 100;
 var threshold = 300;
 
@@ -54,13 +54,21 @@ function animate() {
           threshold = document.getElementById('thresholdInput').value
          }
 
+         var particleInput
+
+         if (particleInput < 1 || particleInput > 10) {
+             particleInput = 0;
+         } else {
+             particleInput = document.getElementById("sizeInput").value
+         }
+ 
     
        for (let i = 0; i < maxParticles; i++) {
             let particle = particles[i];
             // create each particle on the canvas
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
-            ctx.arc(particle.x, particle.y , 5, 0, Math.PI * 2, false);
+            ctx.arc(particle.x, particle.y , particleInput, 0, Math.PI * 2, false);
             ctx.closePath();
             ctx.fill();
             
